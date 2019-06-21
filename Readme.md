@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # How to reorder ASPxGridView rows using buttons or drag-and-drop
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4582/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to move ASPxGridView rows using buttons or jQuery Drag&Drop.</p>
