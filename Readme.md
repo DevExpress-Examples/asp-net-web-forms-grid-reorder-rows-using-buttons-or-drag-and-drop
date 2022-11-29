@@ -14,7 +14,7 @@ Set up the grid and create an invisible column that stores row order indices. So
 <dx:ASPxGridView ID="gvProducts" runat="server" ...>
     <Columns>
         ...
-        <dx:GridViewDataTextColumn FieldName="DisplayOrder" Visible="false" VisibleIndex="2" SortIndex="0"
+        <dx:GridViewDataTextColumn FieldName="DisplayOrder" Visible="false" SortIndex="0"
             SortOrder="Ascending" />
     </Columns>
     <SettingsBehavior AllowSort="false" ... />
