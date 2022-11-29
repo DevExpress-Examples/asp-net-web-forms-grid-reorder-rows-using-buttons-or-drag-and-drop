@@ -1,28 +1,44 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128542189/14.2.3%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E4582)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# Grid View for ASP.NET Web Forms - Reorder Grid Rows Using Buttons and Drag-and-Drop
 
-* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-<!-- default file list end -->
-# How to reorder ASPxGridView rows using buttons or drag-and-drop
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e4582/)**
 <!-- run online end -->
 
+This example demonstrates how to use buttons and jQuery drag-and-drop functionality to reorder rows in [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView).
 
-<p>This example demonstrates how to move ASPxGridView rows using buttons or jQuery Drag&Drop.</p>
-<br />
-<p>To keep the order of rows, it is necessary to set up an extra column to store row order indexes. Then, sort ASPxGridView by this column and deny sorting by other columns. This example stores this information in the <a href="http://documentation.devexpress.com/#AspNet/CustomDocument3732"><u>unbound column</u></a> and additionally puts a dictionary "row key = row index" to the session. We have implemented this approach only for demo purposes. You can store this information in your DataSource.<br /><strong><br />Updated:<br /><br /></strong></p>
-<p>We updated an example for v.14.2 to show how to save order information to a database and tune the ASPxGridView drag and drop appearance using the UI <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> plug-ins. If you need to check the <a href="http://documentation.devexpress.com/#AspNet/CustomDocument3732">unbound column</a>  implementation, choose the second item in the version build combo box. </p>
-<p> </p>
-<p><strong>See also:<br /><a href="https://www.devexpress.com/Support/Center/p/T191258">T191258 - How to reorder GridView rows using buttons or drag-and-drop</a></strong><br /> <a href="https://www.devexpress.com/Support/Center/p/E1810">E1810: How to use jQuery to drag and drop items from one ASPxGridView to another</a></p>
-<p><a href="https://www.devexpress.com/Support/Center/p/E3850">E3850: How to reorder ASPxTreeList sibling nodes, using buttons or drag-and-drop</a><u><br /> </u><a href="https://www.devexpress.com/Support/Center/p/E4299">E4299: How to move up or down a line a row of ASPxGridView by using external buttons</a></p>
+![ASPxGridView - ReorderGridRows](images/ReorderGridRows.png)
 
-<br/>
+Set up the grid and create an invisible column that stores row order indices. Sort the grid by this column and disable sorting at the control level.
 
+```xml
+<dx:ASPxGridView ID="gvProducts" runat="server" ...>
+    <Columns>
+        ...
+        <dx:GridViewDataTextColumn FieldName="DisplayOrder" Visible="false" VisibleIndex="2" SortIndex="0"
+            SortOrder="Ascending" />
+    </Columns>
+    <SettingsBehavior AllowSort="false" ... />
+    ...
+</dx:ASPxGridView>
+```
 
+When a user clicks the button or drags and drops a row, the grid sends a callback to the server, sets the invisible column value to a new row order index, and updates the grid data.
+
+## Files to Look At
+
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+
+## Documentation
+
+- [Draggable](https://jqueryui.com/draggable/)
+- [Droppable](https://jqueryui.com/droppable/)
+- [ASPxGridView.SettingsBehavior.AllowSort](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowSort)
+- [GridViewDataColumn.SortIndex](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.SortIndex)
+- [GridViewDataColumn.SortOrder](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.SortOrder)
+
+## More Examples
+
+- [Grid View for ASP.NET Web Forms - How to Use jQuery to Drag and Drop Items from One Grid to Another](https://github.com/DevExpress-Examples/how-to-use-jquery-to-drag-and-drop-items-from-one-aspxgridview-to-another-e1810)
+- [TreeList for ASP.NET Web Forms - How to Reorder ASPxTreeList Sibling Nodes Using Buttons or Drag-and-Drop](https://github.com/DevExpress-Examples/how-to-reorder-aspxtreelist-sibling-nodes-using-buttons-or-drag-and-drop-e3850)
+- [Grid View for ASP.NET Web Forms - How to Move Up or Down a Grid Row Using External Buttons](https://github.com/DevExpress-Examples/how-to-move-up-or-down-a-line-a-row-of-aspxgridview-by-using-external-buttons-e4299)
