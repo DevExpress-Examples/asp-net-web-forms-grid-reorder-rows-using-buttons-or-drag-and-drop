@@ -5,9 +5,6 @@
 <!-- default badges end -->
 # Grid View for ASP.NET Web Forms - Reorder Grid Rows Using Buttons and Drag-and-Drop
 
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128542189/)**
-<!-- run online end -->
 
 This example demonstrates how to use buttons and jQuery drag-and-drop functionality to reorder rows in [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView).
 
