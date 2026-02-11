@@ -46,7 +46,7 @@ When a user clicks the button or drags and drops a row, the grid sends a callbac
 - [TreeList for ASP.NET Web Forms - How to Reorder ASPxTreeList Sibling Nodes Using Buttons or Drag-and-Drop](https://github.com/DevExpress-Examples/how-to-reorder-aspxtreelist-sibling-nodes-using-buttons-or-drag-and-drop-e3850)
 - [Grid View for ASP.NET Web Forms - How to Move Up or Down a Grid Row Using External Buttons](https://github.com/DevExpress-Examples/how-to-move-up-or-down-a-line-a-row-of-aspxgridview-by-using-external-buttons-e4299)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-reorder-rows-using-buttons-or-drag-and-drop&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-grid-reorder-rows-using-buttons-or-drag-and-drop&~~~was_helpful=no)
 
